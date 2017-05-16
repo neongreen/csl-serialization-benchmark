@@ -1,0 +1,65 @@
+name:                bin-bench
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/neongreen/bin-bench#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Artyom
+maintainer:          yom@artyom.me
+copyright:           2017 Artyom
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+executable bin-bench
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  other-modules:
+    Types
+    Coin
+    Store
+    Cbor
+  ghc-options:         -threaded -rtsopts -O -with-rtsopts=-N
+  ghc-prof-options:    
+  build-depends:       base
+                     , binary-serialise-cbor
+                     , bytestring
+                     , cardano-crypto
+                     , contravariant
+                     , criterion
+                     , cryptonite
+                     , hashable
+                     , memory
+                     , store
+                     , store-core
+                     , th-utilities
+                     , universum
+                     , vector
+                     , weigh
+  default-language:    Haskell2010
+
+  default-extensions:   DeriveDataTypeable
+                        DeriveGeneric
+                        StandaloneDeriving
+                        FlexibleContexts
+                        FlexibleInstances
+                        MultiParamTypeClasses
+                        FunctionalDependencies
+                        DefaultSignatures
+                        NoImplicitPrelude
+                        OverloadedStrings
+                        RecordWildCards
+                        TypeApplications
+                        TupleSections
+                        ViewPatterns
+                        LambdaCase
+                        MultiWayIf
+                        ConstraintKinds
+                        UndecidableInstances
+                        BangPatterns
+
+source-repository head
+  type:     git
+  location: https://github.com/neongreen/bin-bench

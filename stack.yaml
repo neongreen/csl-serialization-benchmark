@@ -1,0 +1,26 @@
+resolver: lts-8.12
+
+packages:
+- '.'
+- location:
+    git: https://github.com/well-typed/binary-serialise-cbor
+    commit: c617075929cef70c1d5cd541ec9eafee67be9a7e
+  extra-dep: true
+- location:
+    git: https://github.com/input-output-hk/cardano-crypto
+    commit: 838b064d8a59286142aa2fe14434fe7601896ddb
+  extra-dep: true
+- location:
+    git: https://github.com/haskell-crypto/cryptonite-openssl
+    commit: fc6737d5f888ce039fc18442386c64050c3e7e05
+  extra-dep: true
+
+extra-deps:
+- universum-0.4.1
+- foundation-0.0.9
+- memory-0.14.5
+- cryptonite-0.23
+
+flags:
+  binary-serialise-cbor:
+    newtime15: true
